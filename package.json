@@ -1,0 +1,21 @@
+{
+  "name": "nexobank-atm",
+  "version": "1.0.0",
+  "description": "Sistema de Caixa Eletrônico Digital para a disciplina de Desenvolvimento Web.",
+  "main": "index.html",
+  "scripts": {
+    "lint": "eslint .",
+    "format": "prettier --write ."
+  },
+  "keywords": [],
+  "author": "Seu Nome",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "prettier": "^3.0.0"
+  },
+  "dependencies": {
+    "jquery": "^3.7.1",
+    "jquery-mask-plugin": "^1.14.16"
+  }
+}

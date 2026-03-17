@@ -1,0 +1,17 @@
+# Dependências do Node
+node_modules/
+
+# Arquivos de log
+npm-debug.log*
+
+# Configurações de IDE
+.vscode/
+.idea/
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# Pasta de build (se usar Sass ou compilação)
+dist/
+.sass-cache/
