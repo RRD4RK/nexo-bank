@@ -1,9 +1,11 @@
-# Especificação Técnica - NexoBank
+# 📑 Especificação Técnica - NexoBank
 
 ## 🏗️ Arquitetura de Software
-A aplicação seguirá o padrão de Single Page Application (SPA) para a área logada, utilizando **jQuery** para trocas de estado e **Tailwind CSS** para a interface.
+A aplicação seguirá o padrão de **Single Page Application (SPA)** para a área logada, utilizando **jQuery v3.7.1** para manipulação dinâmica do DOM e trocas de estado. A interface será construída com **Bootstrap v5.3.3**, utilizando seu sistema de Grid e componentes prontos para garantir responsividade e padronização visual.
 
-## 📊 Modelo de Dados (Diagrama Mermaid)
+## 📊 Modelo de Dados
+
+O sistema utiliza um banco de dados simulado via **JSON Server**, estruturado conforme o diagrama abaixo:
 
 ```mermaid
 erDiagram
@@ -26,4 +28,5 @@ erDiagram
         string cep PK
         string logradouro
         string bairro
+        string localidade
     }
