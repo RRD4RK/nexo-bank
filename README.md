@@ -1,3 +1,7 @@
+![GitHub last commit](https://img.shields.io/github/last-commit/RRD4RK/nexo-bank)
+![GitHub repo size](https://img.shields.io/github/repo-size/RRD4RK/nexo-bank)
+![License MIT](https://img.shields.io/badge/license-MIT-green)
+
 # 🏦 NexoBank - ATM Digital
 
 O **NexoBank** é um sistema de Caixa Eletrônico Digital (ATM) desenvolvido para facilitar operações bancárias essenciais como saques, depósitos, transferências e consulta de extratos. O projeto foca em uma interface limpa, segura e totalmente responsiva.
