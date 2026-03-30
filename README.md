@@ -31,3 +31,7 @@ Sistema de Caixa Eletrônico Digital para operações de saque, depósito e extr
 
 ## 🛠️ Tecnologias
 * HTML5, Sass, JavaScript, jQuery, Tailwind CSS.
+
+
+##**Figma**
+https://www.figma.com/site/vj0CmvOvUrkGv59xQ6yLG3/Sem-t%C3%ADtulo?node-id=0-1&t=h17UklrxgjtXf45W-1
