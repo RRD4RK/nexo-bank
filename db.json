@@ -1,0 +1,31 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "nome": "Usuário Teste",
+      "cpf": "123.456.789-00",
+      "senha": "123",
+      "saldo_atual": 1500.50
+    }
+  ],
+  "transacoes": [
+    {
+      "id": "101",
+      "usuarioId": "1",
+      "tipo": "Depósito",
+      "valor": 500.00,
+      "data": "2026-03-28T14:30:00Z"
+    },
+    {
+      "id": "102",
+      "usuarioId": "1",
+      "tipo": "Saque",
+      "valor": 100.00,
+      "data": "2026-03-29T10:00:00Z"
+    }
+  ],
+  "configuracoes": {
+    "nome_banco": "NexoBank",
+    "agencia": "0001"
+  }
+}
