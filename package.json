@@ -2,32 +2,35 @@
   "name": "nexobank-atm",
   "version": "1.0.0",
   "description": "Sistema de Caixa Eletrônico Digital para a disciplina de Desenvolvimento Web.",
+  "keywords": [],
+  "homepage": "https://github.com/RRD4RK/nexo-bank#readme",
+  "bugs": {
+    "url": "https://github.com/RRD4RK/nexo-bank/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RRD4RK/nexo-bank.git"
+  },
+  "license": "ISC",
+  "author": "Seu Nome",
+  "type": "commonjs",
   "main": "index.html",
   "scripts": {
     "sass": "sass --watch assets/scss/main.scss assets/css/main.css",
     "lint": "eslint .",
     "format": "prettier --write ."
   },
-  "keywords": [],
-  "author": "Seu Nome",
-  "license": "ISC",
-  "devDependencies": {
-    "eslint": "^8.0.0",
-    "prettier": "^3.0.0"
-  },
   "dependencies": {
+    "bootstrap": "^5.3.8",
+    "bootstrap-css": "^4.0.0-alpha.5",
     "jquery": "^3.7.1",
     "jquery-mask-plugin": "^1.14.16",
     "json-server": "^1.0.0-beta.15",
+    "materialize-css": "^1.0.0",
     "sass": "^1.98.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/RRD4RK/nexo-bank.git"
-  },
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/RRD4RK/nexo-bank/issues"
-  },
-  "homepage": "https://github.com/RRD4RK/nexo-bank#readme"
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "prettier": "^3.0.0"
+  }
 }
