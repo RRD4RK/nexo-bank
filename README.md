@@ -44,7 +44,7 @@ Você pode visualizar o design planejado para este sistema através do link abai
 - [ ] **ID 12** - Validação com REGEX
 - [ ] **ID 13** - Elementos de seleção (select)
 - [ ] **ID 14** - Web Storage (localStorage)
-- [ ] **ID 15** - Configuração Node.js/NPM
+- [x] **ID 15** - Configuração Node.js/NPM
 - [x] **ID 16** - Versionamento Git/GitHub
 - [x] **ID 17** - README padronizado
 - [ ] **ID 18** - Organização modular de arquivos
