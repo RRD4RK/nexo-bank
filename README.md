@@ -47,7 +47,7 @@ Você pode visualizar o design planejado para este sistema através do link abai
 - [x] **ID 15** - Configuração Node.js/NPM
 - [x] **ID 16** - Versionamento Git/GitHub
 - [x] **ID 17** - README padronizado
-- [ ] **ID 18** - Organização modular de arquivos
+- [x] **ID 18** - Organização modular de arquivos
 - [ ] **ID 19** - Linters e Formatadores (ESLint/Prettier)
 - [ ] **ID 20** - jQuery para manipulação do DOM
 - [ ] **ID 21** - Plugin jQuery (Mask)
