@@ -9,7 +9,7 @@ npm-debug.log*
 .idea/
 
 # Arquivos de sistema
-.DS_Store/
+/.DS_Store
 Thumbs.db
 
 # Pasta de build (se usar Sass ou compilação)
