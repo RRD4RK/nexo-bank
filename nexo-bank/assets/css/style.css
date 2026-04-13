@@ -1,0 +1,26 @@
+main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form{
+    border: solid 1px gray;
+    width: 40vw;
+    border-radius: 1rem;
+    margin: auto;
+    padding: 1rem;
+    display: inline-block;
+    position:absolute;
+    align-content: space-around;
+    justify-content:stretch;
+}
+
+
+.form-control{
+    width: 30vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
