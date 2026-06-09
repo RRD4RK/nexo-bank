@@ -35,6 +35,7 @@
                   id="registerName"
                   type="text"
                   placeholder="Nome completo"
+                  minlength="3"
                   required
                 />
                 <label for="registerName">Nome completo</label>
@@ -47,6 +48,10 @@
                   id="registerCpf"
                   type="text"
                   placeholder="CPF"
+                  inputmode="numeric"
+                  maxlength="14"
+                  pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+                  title="Digite o CPF no formato 000.000.000-00"
                   required
                 />
                 <label for="registerCpf">CPF</label>
@@ -68,6 +73,7 @@
             <div class="col-12">
               <div class="form-floating">
                 <select class="form-select" id="registerProfile" required>
+                  <option value="" selected disabled>Selecione o tipo de conta</option>
                   <option value="corrente">Conta corrente</option>
                   <option value="poupanca">Conta poupança</option>
                 </select>

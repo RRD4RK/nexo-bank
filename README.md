@@ -44,19 +44,19 @@ Você pode visualizar o design planejado para este sistema através do link abai
 - [x] **ID 08** - Tipografia responsiva com `clamp()`
 - [x] **ID 09** - Responsividade de imagens com containers relativos e `object-fit`
 - [x] **ID 10** - Otimização de imagens com WebP, `srcset`, `sizes` e fallback PNG
-- [ ] **ID 11** - Validação HTML nativa
-- [ ] **ID 12** - Validação com REGEX
-- [ ] **ID 13** - Elementos de seleção (select)
-- [ ] **ID 14** - Web Storage (localStorage)
+- [x] **ID 11** - Validação HTML nativa
+- [x] **ID 12** - Validação com REGEX
+- [x] **ID 13** - Elementos de seleção (select)
+- [x] **ID 14** - Web Storage (localStorage)
 - [x] **ID 15** - Configuração Node.js/NPM
 - [x] **ID 16** - Versionamento Git/GitHub
 - [x] **ID 17** - README padronizado
 - [x] **ID 18** - Organização modular de arquivos
 - [x] **ID 19** - Linters e Formatadores (ESLint/Prettier)
-- [ ] **ID 20** - jQuery para manipulação do DOM
-- [ ] **ID 21** - Plugin jQuery (Mask)
-- [ ] **ID 22** - Requisição POST (JSON Server)
-- [ ] **ID 23** - Requisição GET (JSON Server)
+- [x] **ID 20** - jQuery para manipulação do DOM
+- [x] **ID 21** - Plugin jQuery (Mask)
+- [x] **ID 22** - Requisição POST (JSON Server)
+- [x] **ID 23** - Requisição GET (JSON Server)
 - [x] **ID 24** - APIs Públicas (HG Brasil Finance)
 
 ---
@@ -74,20 +74,4 @@ Você pode visualizar o design planejado para este sistema através do link abai
 - `npm run lint` valida os arquivos JavaScript com ESLint.
 - `npm run format` padroniza HTML, JS, SCSS, JSON e Markdown com Prettier.
 
-## 🎥 Guia curto para o vídeo
 
-Para cada ID, mostre o código no VS Code e o efeito no navegador/DevTools:
-
-- **ID 02:** Grid e utilitários Bootstrap em `pages/deposit.html`, `pages/withdraw.html`, `pages/register.html` e `pages/locator.html`.
-- **ID 03:** `.dashboard-layout`, `.operation-menu`, `.hero-home`, `.keypad` e media queries em `assets/css/style.css`.
-- **ID 04:** `card`, `btn`, `modal`, `toast`, `table` e `form-control` nas páginas internas.
-- **ID 05:** `min()`, `%`, `rem`, `vh`, `vw` e `clamp()` em `assets/css/style.css` e `assets/scss/main.scss`.
-- **ID 07:** variáveis em `assets/scss/_variable.scss`, mixins em `assets/scss/_mixins.scss` e uso em `assets/scss/main.scss`, compilado para `assets/css/scss-demo.css`.
-- **ID 08:** tipografia fluida com `clamp()` no hero, saldo e displays do ATM.
-- **ID 09:** `object-fit`, `aspect-ratio`, `max-width` e containers relativos nos logos e hero.
-- **ID 10:** `<picture>`, WebP, `srcset`, `sizes` e fallback PNG no logo da home/navbar.
-- **ID 15:** `package.json`, `package-lock.json` e scripts NPM.
-- **ID 16:** `.gitignore`, branch principal e histórico no GitHub.
-- **ID 17:** checklist e instruções neste `README.md`.
-- **ID 18:** organização por `pages/`, `assets/css/`, `assets/scss/`, `assets/js/`, `assets/img/` e `docs/`.
-- **ID 19:** `.eslintrc.json`, `.prettierrc`, `npm run lint` e `npm run format`.

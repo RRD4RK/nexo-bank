@@ -1,6 +1,10 @@
 (function ($) {
   const STORAGE_KEY = 'nexobank-atm-state-v3';
   const API_BASE = 'http://localhost:3000';
+  const CPF_REGEX = /^\d{3}\.\d{3}\.\d{3}-\d{2}$/;
+  const CEP_REGEX = /^\d{5}-\d{3}$/;
+  const MONEY_REGEX = /^\d{1,3}(\.\d{3})*,\d{2}$/;
+  const ACCOUNT_OR_CPF_REGEX = /^(\d{3}\.\d{3}\.\d{3}-\d{2}|\d{1,20})$/;
 
   const DEFAULT_STATE = {
     currentUserId: null,
@@ -260,9 +264,9 @@
               <div><strong>${quote.code}</strong><span class="d-block">${quote.name}</span></div>
               <b>${formatMoney(quote.value)}</b>
             </div>
-          `,
+          `
         )
-        .join(''),
+        .join('')
     );
   }
 
@@ -293,6 +297,12 @@
     event.preventDefault();
     const cpf = $('#loginCpf').val().trim();
     const senha = $('#loginPassword').val();
+
+    if (!matchesRegex(cpf, CPF_REGEX)) {
+      showFeedback('#loginFeedback', 'Digite o CPF no formato 000.000.000-00.');
+      return;
+    }
+
     const user = state.users.find((item) => item.cpf === cpf && item.senha === senha);
 
     if (!user) {
@@ -308,6 +318,11 @@
   function registerUser(event) {
     event.preventDefault();
     const cpf = $('#registerCpf').val().trim();
+
+    if (!matchesRegex(cpf, CPF_REGEX)) {
+      showFeedback('#registerFeedback', 'Digite o CPF no formato 000.000.000-00.');
+      return;
+    }
 
     if (state.users.some((user) => user.cpf === cpf)) {
       showFeedback('#registerFeedback', 'Já existe uma conta com este CPF.');
@@ -417,10 +432,20 @@
   function requestTransfer(event) {
     event.preventDefault();
     const user = currentUser();
-    const amount = parseMoney($('#transferValue').val());
+    const transferValue = $('#transferValue').val().trim();
+    const amount = parseMoney(transferValue);
     const password = $('#transferPassword').val();
     const targetText = $('#transferTarget').val().trim();
 
+    if (!matchesRegex(targetText, ACCOUNT_OR_CPF_REGEX)) {
+      return showFeedback(
+        '#transferFeedback',
+        'Digite CPF com máscara ou apenas números da conta de destino.'
+      );
+    }
+    if (!matchesRegex(transferValue, MONEY_REGEX)) {
+      return showFeedback('#transferFeedback', 'Digite o valor no formato 0,00.');
+    }
     if (password !== user.senha) return showFeedback('#transferFeedback', 'Senha incorreta.');
     if (!amount) return showFeedback('#transferFeedback', 'Informe um valor válido.');
     if (amount > user.saldo_atual) return showFeedback('#transferFeedback', 'Saldo insuficiente.');
@@ -434,13 +459,13 @@
           'Depósito',
           amount,
           `Transferência recebida de ${firstName(user.nome)}`,
-          target.id,
+          target.id
         );
       }
       addTransaction(
         'Transferência',
         amount,
-        target ? `Destino: ${target.nome}` : `Destino externo: ${targetText}`,
+        target ? `Destino: ${target.nome}` : `Destino externo: ${targetText}`
       );
       finishOperation('TRANSFERÊNCIA', amount);
     });
@@ -503,7 +528,7 @@
 
     if (!rows.length) {
       $rows.append(
-        `<tr><td colspan="3" class="text-center text-muted">Nenhuma movimentação encontrada.</td></tr>`,
+        `<tr><td colspan="3" class="text-center text-muted">Nenhuma movimentação encontrada.</td></tr>`
       );
       return;
     }
@@ -535,6 +560,20 @@
   async function findAgency(event) {
     event.preventDefault();
     const cep = $('#locatorCep').val().trim();
+
+    if (!matchesRegex(cep, CEP_REGEX)) {
+      renderAgencyResult(
+        {
+          logradouro: 'CEP inválido',
+          bairro: 'Use o formato 00000-000',
+          localidade: 'NexoBank',
+        },
+        'Formato de CEP inválido',
+        'A busca só é enviada quando o CEP passa pela validação REGEX'
+      );
+      return;
+    }
+
     const agency = state.agencies.find((item) => normalizeCep(item.cep) === normalizeCep(cep));
 
     $('#agencyResult').html(`
@@ -553,7 +592,11 @@
       renderAgencyResult(result.agency, result.title, result.reason, address);
     } catch (error) {
       const result = nearestAgency(cep);
-      renderAgencyResult(result, 'Agência mais próxima', 'ViaCEP indisponível; usando fallback local');
+      renderAgencyResult(
+        result,
+        'Agência mais próxima',
+        'ViaCEP indisponível; usando fallback local'
+      );
     }
   }
 
@@ -589,7 +632,9 @@
       };
     }
 
-    const sameState = state.agencies.find((agency) => parseLocation(agency.localidade).uf === address.uf);
+    const sameState = state.agencies.find(
+      (agency) => parseLocation(agency.localidade).uf === address.uf
+    );
 
     if (sameState) {
       return {
@@ -672,6 +717,10 @@
 
   function showFeedback(selector, message) {
     $(selector).removeClass('d-none alert-warning').addClass('alert-danger').text(message);
+  }
+
+  function matchesRegex(value, regex) {
+    return regex.test(String(value || '').trim());
   }
 
   function notify(message) {

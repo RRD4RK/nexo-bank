@@ -33,6 +33,10 @@
               id="loginCpf"
               type="text"
               placeholder="CPF"
+              inputmode="numeric"
+              maxlength="14"
+              pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+              title="Digite o CPF no formato 000.000.000-00"
               required
             />
             <label for="loginCpf">CPF</label>
@@ -43,6 +47,7 @@
               id="loginPassword"
               type="password"
               placeholder="Senha"
+              minlength="3"
               required
             />
             <label for="loginPassword">Senha</label>
