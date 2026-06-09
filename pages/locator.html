@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NexoBank | Agências</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@300;400;500;600&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+  </head>
+  <body data-page="locator" data-base="../">
+    <div data-component="navbar"></div>
+    <main class="page-shell">
+      <div class="card locator-card">
+        <div class="card-body">
+          <div class="row g-4">
+            <div class="col-lg-5">
+              <p class="kicker">Visitante e cliente</p>
+              <h1 class="h2">Localizador de agências</h1>
+              <p class="text-muted">Informe um CEP para encontrar suporte físico próximo. Exemplos: 01001-000, 30140-071, 20040-020.</p>
+              <form id="locatorForm">
+                <div class="form-floating mb-3"><input class="form-control cep-mask" id="locatorCep" type="text" placeholder="CEP" required><label for="locatorCep">CEP</label></div>
+                <div class="d-grid gap-2">
+                  <button class="btn btn-primary" type="submit">Buscar agência</button>
+                  <a class="btn btn-outline-secondary" href="dashboard.html">Voltar ao menu</a>
+                </div>
+              </form>
+            </div>
+            <div class="col-lg-7">
+              <div class="agency-result" id="agencyResult"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div data-component="footer"></div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../node_modules/jquery/tmp/jquery.js"><\/script>');</script>
+    <script src="../node_modules/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/components.js"></script>
+    <script src="../assets/js/app.js"></script>
+  </body>
+</html>

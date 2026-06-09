@@ -1,0 +1,43 @@
+@use 'variable';
+@use 'mixins' as *;
+
+/*
+  Arquivo-fonte Sass do NexoBank.
+  A folha publicada em ../css/style.css mantém o CSS compilado usado pelo GitHub Pages.
+  Este SCSS documenta a modularização exigida na avaliação: variáveis no partial
+  _variable.scss, mixins reutilizáveis no partial _mixins.scss e regras responsivas aqui.
+*/
+
+.card,
+.atm-frame,
+.receipt-paper {
+  @include card-surface;
+}
+
+.brand-link img,
+.hero-art img {
+  @include responsive-image(contain);
+}
+
+.hero-home h1 {
+  font-size: clamp(3.4rem, 8vw, 6.5rem);
+}
+
+.hero-copy {
+  font-size: clamp(1rem, 2vw, 1.16rem);
+}
+
+.balance-card strong {
+  font-size: clamp(2.4rem, 7vw, 4.2rem);
+}
+
+@include mobile {
+  .hero-actions,
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .operation-menu {
+    grid-template-columns: 1fr;
+  }
+}

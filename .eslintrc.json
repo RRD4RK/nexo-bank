@@ -1,0 +1,19 @@
+{
+  "env": {
+    "browser": true,
+    "jquery": true,
+    "es2021": true
+  },
+  "extends": ["eslint:recommended"],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "script"
+  },
+  "globals": {
+    "bootstrap": "readonly"
+  },
+  "rules": {
+    "no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
+    "no-empty": ["error", { "allowEmptyCatch": true }]
+  }
+}

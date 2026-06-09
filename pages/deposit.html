@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NexoBank | Depósito</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@300;400;500;600&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+  </head>
+  <body data-page="deposit" data-base="../">
+    <div data-component="navbar"></div>
+    <main class="page-shell">
+      <div class="card split-card">
+        <div class="card-body">
+          <a class="btn btn-light btn-icon mb-3" href="dashboard.html" aria-label="Voltar"><span class="material-symbols-outlined">arrow_back</span></a>
+          <div class="row g-4 align-items-center">
+            <div class="col-lg-6">
+              <p class="kicker">Depósito ágil</p>
+              <h1 class="h2">Envelope de depósito</h1>
+              <ol class="step-list"><li>Digite o valor total do envelope.</li><li>Confirme a operação com sua senha.</li><li>O saldo será atualizado instantaneamente.</li></ol>
+              <div class="deposit-slot"><span class="material-symbols-outlined">local_atm</span>Entrada de envelopes</div>
+            </div>
+            <div class="col-lg-6">
+              <form id="depositForm">
+                <div class="amount-display" id="depositAmount">R$ 0,00</div>
+                <div class="keypad compact" data-keypad="deposit">
+                  <button type="button" data-key="1">1</button><button type="button" data-key="2">2</button><button type="button" data-key="3">3</button>
+                  <button type="button" data-key="4">4</button><button type="button" data-key="5">5</button><button type="button" data-key="6">6</button>
+                  <button type="button" data-key="7">7</button><button type="button" data-key="8">8</button><button type="button" data-key="9">9</button>
+                  <button class="danger" type="button" data-key="clear">Limpar</button><button type="button" data-key="0">0</button><button type="button" data-key="back">←</button>
+                </div>
+                <div class="form-floating my-3"><input class="form-control" id="depositPassword" type="password" placeholder="Senha" required><label for="depositPassword">Confirmar senha</label></div>
+                <div class="alert alert-danger d-none" id="depositFeedback" role="alert"></div>
+                <button class="btn btn-success btn-lg w-100" type="submit">Confirmar depósito</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div data-component="footer"></div>
+    <div class="modal fade" id="confirmModal" tabindex="-1" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h2 class="modal-title fs-5">Confirmar operação</h2><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Fechar"></button></div><div class="modal-body" id="confirmModalBody"></div><div class="modal-footer"><button class="btn btn-outline-secondary" type="button" data-bs-dismiss="modal">Cancelar</button><button class="btn btn-primary" type="button" id="confirmModalButton">Confirmar</button></div></div></div></div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../node_modules/jquery/tmp/jquery.js"><\/script>');</script>
+    <script src="../node_modules/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/components.js"></script>
+    <script src="../assets/js/app.js"></script>
+  </body>
+</html>

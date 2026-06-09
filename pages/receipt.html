@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NexoBank | Comprovante</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@300;400;500;600&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+  </head>
+  <body data-page="receipt" data-base="../">
+    <div data-component="navbar"></div>
+    <main class="page-shell">
+      <div class="receipt-stage">
+        <article class="receipt-paper">
+          <h1>Comprovante de operação</h1>
+          <p>Transação realizada com sucesso</p>
+          <dl>
+            <div><dt>Operação</dt><dd id="receiptType">-</dd></div>
+            <div><dt>Data/Hora</dt><dd id="receiptDate">-</dd></div>
+            <div><dt>Terminal</dt><dd>ATM-0042-SP</dd></div>
+            <div><dt>Autenticação</dt><dd id="receiptAuth">-</dd></div>
+            <div class="total"><dt>Valor</dt><dd id="receiptAmount">R$ 0,00</dd></div>
+            <div><dt>Saldo Atual</dt><dd id="receiptBalance">R$ 0,00</dd></div>
+          </dl>
+          <small>Guarde este comprovante para sua segurança.</small>
+        </article>
+        <div class="d-grid gap-2">
+          <a class="btn btn-primary" href="dashboard.html">Nova operação</a>
+          <a class="btn btn-outline-secondary" href="statement.html">Ver extrato</a>
+        </div>
+      </div>
+    </main>
+    <div data-component="footer"></div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../node_modules/jquery/tmp/jquery.js"><\/script>');</script>
+    <script src="../node_modules/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/components.js"></script>
+    <script src="../assets/js/app.js"></script>
+  </body>
+</html>

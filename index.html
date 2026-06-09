@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NexoBank | ATM Digital</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@300;400;500;600&family=Public+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body data-page="home" data-base="">
+    <div data-component="navbar"></div>
+
+    <main class="page-shell">
+      <section class="hero-home">
+        <div class="hero-content">
+          <p class="kicker">ATM Digital responsivo</p>
+          <h1>NexoBank</h1>
+          <p class="hero-copy">
+            Simulador de caixa eletrônico com login seguro, saldo, saque, depósito, transferência,
+            extrato, câmbio e localizador de agências.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary btn-lg" href="pages/login.html">Acessar conta</a>
+            <a class="btn btn-light btn-lg" href="pages/register.html">Criar conta</a>
+            <a class="btn btn-outline-light btn-lg" href="pages/locator.html">Buscar agência</a>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <picture>
+            <source
+              type="image/webp"
+              srcset="assets/img/logo.webp 1408w"
+              sizes="(max-width: 620px) 90vw, 28rem"
+            />
+            <img
+              src="assets/img/logo.png"
+              srcset="assets/img/logo.png 1408w"
+              sizes="(max-width: 620px) 90vw, 28rem"
+              alt=""
+              width="1408"
+              height="768"
+              loading="eager"
+              decoding="async"
+            />
+          </picture>
+        </div>
+      </section>
+    </main>
+
+    <div data-component="footer"></div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+      window.jQuery || document.write('<script src="node_modules/jquery/tmp/jquery.js"><\/script>');
+    </script>
+    <script src="node_modules/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/components.js"></script>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>

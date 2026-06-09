@@ -1,0 +1,18 @@
+@mixin responsive-image($fit: cover) {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: $fit;
+}
+
+@mixin card-surface {
+  border-color: rgba(148, 163, 184, 0.3);
+  border-radius: 1.25rem;
+  box-shadow: var(--shadow);
+}
+
+@mixin mobile {
+  @media (max-width: 620px) {
+    @content;
+  }
+}

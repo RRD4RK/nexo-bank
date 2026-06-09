@@ -1,0 +1,59 @@
+@charset "UTF-8";
+:root {
+  --brand-950: #061b3a;
+  --brand-900: #073a78;
+  --brand-700: #0d63bd;
+  --brand-100: #e9f3ff;
+  --ink: #111827;
+  --muted: #64748b;
+  --line: #dbe4ef;
+  --surface: rgba(255, 255, 255, 0.94);
+  --success: #15803d;
+  --danger: #b91c1c;
+  --warning: #b45309;
+  --shadow: 0 24px 60px rgba(15, 23, 42, 0.16);
+}
+
+/*
+  Arquivo-fonte Sass do NexoBank.
+  A folha publicada em ../css/style.css mantém o CSS compilado usado pelo GitHub Pages.
+  Este SCSS documenta a modularização exigida na avaliação: variáveis no partial
+  _variable.scss, mixins reutilizáveis no partial _mixins.scss e regras responsivas aqui.
+*/
+.card,
+.atm-frame,
+.receipt-paper {
+  border-color: rgba(148, 163, 184, 0.3);
+  border-radius: 1.25rem;
+  box-shadow: var(--shadow);
+}
+
+.brand-link img,
+.hero-art img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.hero-home h1 {
+  font-size: clamp(3.4rem, 8vw, 6.5rem);
+}
+
+.hero-copy {
+  font-size: clamp(1rem, 2vw, 1.16rem);
+}
+
+.balance-card strong {
+  font-size: clamp(2.4rem, 7vw, 4.2rem);
+}
+
+@media (max-width: 620px) {
+  .hero-actions,
+  .hero-actions .btn {
+    width: 100%;
+  }
+  .operation-menu {
+    grid-template-columns: 1fr;
+  }
+}

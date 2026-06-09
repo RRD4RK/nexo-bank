@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NexoBank | Extrato</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@300;400;500;600&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+  </head>
+  <body data-page="statement" data-base="../">
+    <div data-component="navbar"></div>
+    <main class="page-shell top-align">
+      <div class="card statement-card">
+        <div class="card-body">
+          <div class="d-flex flex-column flex-md-row justify-content-between gap-3 mb-3">
+            <div>
+              <p class="kicker">Extrato</p>
+              <h1 class="h2">Últimas movimentações</h1>
+            </div>
+            <div class="d-flex gap-2">
+              <select class="form-select" id="statementFilter" aria-label="Filtrar extrato">
+                <option value="Todos">Todos</option>
+                <option value="Depósito">Depósitos</option>
+                <option value="Saque">Saques</option>
+                <option value="Transferência">Transferências</option>
+              </select>
+              <button class="btn btn-light btn-icon" type="button" data-action="print" aria-label="Imprimir"><span class="material-symbols-outlined">print</span></button>
+              <a class="btn btn-outline-primary" href="dashboard.html">Menu</a>
+            </div>
+          </div>
+          <div class="table-responsive">
+            <table class="table align-middle">
+              <thead><tr><th>Data</th><th>Operação</th><th class="text-end">Valor</th></tr></thead>
+              <tbody id="statementRows"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div data-component="footer"></div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../node_modules/jquery/tmp/jquery.js"><\/script>');</script>
+    <script src="../node_modules/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/components.js"></script>
+    <script src="../assets/js/app.js"></script>
+  </body>
+</html>

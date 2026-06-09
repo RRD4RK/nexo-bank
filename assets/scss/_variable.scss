@@ -1,0 +1,27 @@
+$brand-950: #061b3a;
+$brand-900: #073a78;
+$brand-700: #0d63bd;
+$brand-100: #e9f3ff;
+$ink: #111827;
+$muted: #64748b;
+$line: #dbe4ef;
+$surface: rgba(255, 255, 255, 0.94);
+$success: #15803d;
+$danger: #b91c1c;
+$warning: #b45309;
+$shadow: 0 24px 60px rgba(15, 23, 42, 0.16);
+
+:root {
+  --brand-950: #{$brand-950};
+  --brand-900: #{$brand-900};
+  --brand-700: #{$brand-700};
+  --brand-100: #{$brand-100};
+  --ink: #{$ink};
+  --muted: #{$muted};
+  --line: #{$line};
+  --surface: #{$surface};
+  --success: #{$success};
+  --danger: #{$danger};
+  --warning: #{$warning};
+  --shadow: #{$shadow};
+}

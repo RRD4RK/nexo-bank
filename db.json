@@ -1,0 +1,265 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "nome": "Usuário Teste",
+      "cpf": "123.456.789-00",
+      "senha": "123",
+      "saldo_atual": 0,
+      "tipo": "corrente"
+    },
+    {
+      "id": "WpHsFT726dY",
+      "nome": "raphael ramos",
+      "cpf": "110.644.369-19",
+      "senha": "123456",
+      "saldo_atual": 0,
+      "tipo": "corrente"
+    }
+  ],
+  "transacoes": [
+    {
+      "id": "PjgJxPJ3wi8",
+      "usuarioId": "1780439561915",
+      "tipo": "Depósito",
+      "valor": 1233.33,
+      "descricao": "Depósito em envelope",
+      "data": "2026-06-02T22:33:13.997Z"
+    },
+    {
+      "id": "BNjF6wneLx8",
+      "usuarioId": "1780439561915",
+      "tipo": "Transferência",
+      "valor": 12.22,
+      "descricao": "Destino externo: 12345678900",
+      "data": "2026-06-02T22:33:42.276Z"
+    },
+    {
+      "id": "sRpiYN34j6Q",
+      "usuarioId": "1780439561915",
+      "tipo": "Saque",
+      "valor": 125.48,
+      "descricao": "Saque no terminal #8824-A",
+      "data": "2026-06-02T22:36:27.921Z"
+    },
+    {
+      "id": "LlZe6Lhylx0",
+      "usuarioId": "1780439561915",
+      "tipo": "Depósito",
+      "valor": 888.99,
+      "descricao": "Depósito em envelope",
+      "data": "2026-06-02T22:42:21.483Z"
+    },
+    {
+      "id": "XGOvdCBIkDo",
+      "usuarioId": "WpHsFT726dY",
+      "tipo": "Depósito",
+      "valor": 11.11,
+      "descricao": "Depósito em envelope",
+      "data": "2026-06-09T21:54:00.388Z"
+    }
+  ],
+  "agencias": [
+    {
+      "cep": "69900-120",
+      "logradouro": "Rua Benjamin Constant, 900",
+      "bairro": "Centro",
+      "localidade": "Rio Branco - AC",
+      "id": "agencia-rio-branco-ac"
+    },
+    {
+      "cep": "57020-000",
+      "logradouro": "Rua do Comércio, 250",
+      "bairro": "Centro",
+      "localidade": "Maceió - AL",
+      "id": "agencia-maceio-al"
+    },
+    {
+      "cep": "68900-073",
+      "logradouro": "Av. FAB, 1200",
+      "bairro": "Central",
+      "localidade": "Macapá - AP",
+      "id": "agencia-macapa-ap"
+    },
+    {
+      "cep": "69005-040",
+      "logradouro": "Av. Eduardo Ribeiro, 620",
+      "bairro": "Centro",
+      "localidade": "Manaus - AM",
+      "id": "agencia-manaus-am"
+    },
+    {
+      "cep": "40020-000",
+      "logradouro": "Av. Sete de Setembro, 450",
+      "bairro": "Centro",
+      "localidade": "Salvador - BA",
+      "id": "agencia-salvador-ba"
+    },
+    {
+      "cep": "60025-060",
+      "logradouro": "Rua Floriano Peixoto, 310",
+      "bairro": "Centro",
+      "localidade": "Fortaleza - CE",
+      "id": "agencia-fortaleza-ce"
+    },
+    {
+      "cep": "70040-010",
+      "logradouro": "SBS Quadra 2, Bloco A",
+      "bairro": "Asa Sul",
+      "localidade": "Brasília - DF",
+      "id": "agencia-brasilia-df"
+    },
+    {
+      "cep": "29010-001",
+      "logradouro": "Av. Jerônimo Monteiro, 290",
+      "bairro": "Centro",
+      "localidade": "Vitória - ES",
+      "id": "agencia-vitoria-es"
+    },
+    {
+      "cep": "74003-010",
+      "logradouro": "Av. Goiás, 780",
+      "bairro": "Setor Central",
+      "localidade": "Goiânia - GO",
+      "id": "agencia-goiania-go"
+    },
+    {
+      "cep": "65010-000",
+      "logradouro": "Rua Grande, 550",
+      "bairro": "Centro",
+      "localidade": "São Luís - MA",
+      "id": "agencia-sao-luis-ma"
+    },
+    {
+      "cep": "78005-370",
+      "logradouro": "Av. Getúlio Vargas, 430",
+      "bairro": "Centro Norte",
+      "localidade": "Cuiabá - MT",
+      "id": "agencia-cuiaba-mt"
+    },
+    {
+      "cep": "79002-071",
+      "logradouro": "Av. Afonso Pena, 1500",
+      "bairro": "Centro",
+      "localidade": "Campo Grande - MS",
+      "id": "agencia-campo-grande-ms"
+    },
+    {
+      "cep": "30140-071",
+      "logradouro": "Av. Afonso Pena, 750",
+      "bairro": "Centro",
+      "localidade": "Belo Horizonte - MG",
+      "id": "agencia-belo-horizonte-mg"
+    },
+    {
+      "cep": "66010-020",
+      "logradouro": "Av. Presidente Vargas, 800",
+      "bairro": "Campina",
+      "localidade": "Belém - PA",
+      "id": "agencia-belem-pa"
+    },
+    {
+      "cep": "58010-000",
+      "logradouro": "Av. General Osório, 180",
+      "bairro": "Centro",
+      "localidade": "João Pessoa - PB",
+      "id": "agencia-joao-pessoa-pb"
+    },
+    {
+      "cep": "80010-000",
+      "logradouro": "Rua XV de Novembro, 1000",
+      "bairro": "Centro",
+      "localidade": "Curitiba - PR",
+      "id": "agencia-curitiba-pr"
+    },
+    {
+      "cep": "50010-000",
+      "logradouro": "Av. Guararapes, 320",
+      "bairro": "Santo Antônio",
+      "localidade": "Recife - PE",
+      "id": "agencia-recife-pe"
+    },
+    {
+      "cep": "64000-100",
+      "logradouro": "Av. Frei Serafim, 1200",
+      "bairro": "Centro",
+      "localidade": "Teresina - PI",
+      "id": "agencia-teresina-pi"
+    },
+    {
+      "cep": "20040-020",
+      "logradouro": "Av. Rio Branco, 156",
+      "bairro": "Centro",
+      "localidade": "Rio de Janeiro - RJ",
+      "id": "agencia-rio-de-janeiro-rj"
+    },
+    {
+      "cep": "59025-500",
+      "logradouro": "Av. Rio Branco, 571",
+      "bairro": "Cidade Alta",
+      "localidade": "Natal - RN",
+      "id": "agencia-natal-rn"
+    },
+    {
+      "cep": "90010-150",
+      "logradouro": "Rua dos Andradas, 1001",
+      "bairro": "Centro Histórico",
+      "localidade": "Porto Alegre - RS",
+      "id": "agencia-porto-alegre-rs"
+    },
+    {
+      "cep": "76801-098",
+      "logradouro": "Av. Sete de Setembro, 950",
+      "bairro": "Centro",
+      "localidade": "Porto Velho - RO",
+      "id": "agencia-porto-velho-ro"
+    },
+    {
+      "cep": "69301-000",
+      "logradouro": "Av. Jaime Brasil, 250",
+      "bairro": "Centro",
+      "localidade": "Boa Vista - RR",
+      "id": "agencia-boa-vista-rr"
+    },
+    {
+      "cep": "88010-400",
+      "logradouro": "Rua Felipe Schmidt, 515",
+      "bairro": "Centro",
+      "localidade": "Florianópolis - SC",
+      "id": "agencia-florianopolis-sc"
+    },
+    {
+      "cep": "01001-000",
+      "logradouro": "Praça da Sé, 100",
+      "bairro": "Sé",
+      "localidade": "São Paulo - SP",
+      "id": "agencia-sao-paulo-sp"
+    },
+    {
+      "cep": "49010-390",
+      "logradouro": "Rua João Pessoa, 320",
+      "bairro": "Centro",
+      "localidade": "Aracaju - SE",
+      "id": "agencia-aracaju-se"
+    },
+    {
+      "cep": "77001-002",
+      "logradouro": "Quadra 104 Norte, Av. JK",
+      "bairro": "Plano Diretor Norte",
+      "localidade": "Palmas - TO",
+      "id": "agencia-palmas-to"
+    },
+    {
+      "cep": "85010-971",
+      "logradouro": "Rua XV de Novembro, 7050",
+      "bairro": "Centro",
+      "localidade": "Guarapuava - PR",
+      "id": "agencia-guarapuava-85010-971"
+    }
+  ],
+  "configuracoes": {
+    "nome_banco": "NexoBank",
+    "agencia": "0001"
+  },
+  "$schema": "./node_modules/json-server/schema.json"
+}

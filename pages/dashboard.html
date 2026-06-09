@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NexoBank | Menu Principal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@300;400;500;600&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+  </head>
+  <body data-page="dashboard" data-base="../">
+    <div data-component="navbar"></div>
+    <main class="page-shell top-align">
+      <div class="dashboard-layout">
+        <article class="balance-card">
+          <p class="kicker">Bem-vindo(a), <span data-user-name>Cliente</span></p>
+          <h1>Saldo disponível</h1>
+          <strong data-current-balance>R$ 0,00</strong>
+          <small>Conta <span data-account-id>0000</span> • atualização em tempo real</small>
+        </article>
+        <aside class="card">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-start gap-3">
+              <div>
+                <p class="kicker">Câmbio</p>
+                <h2 class="h4">Cotações</h2>
+              </div>
+              <button class="btn btn-light btn-icon" type="button" data-action="refresh-quotes" aria-label="Atualizar cotações">
+                <span class="material-symbols-outlined">sync</span>
+              </button>
+            </div>
+            <div class="quote-list" id="quoteList"></div>
+          </div>
+        </aside>
+        <nav class="operation-menu" aria-label="Operações bancárias">
+          <a class="operation-button" href="withdraw.html"><span class="material-symbols-outlined">payments</span><strong>Sacar</strong><small>Validação de saldo</small></a>
+          <a class="operation-button" href="deposit.html"><span class="material-symbols-outlined">add_card</span><strong>Depositar</strong><small>Saldo instantâneo</small></a>
+          <a class="operation-button" href="transfer.html"><span class="material-symbols-outlined">swap_horiz</span><strong>Transferir</strong><small>Entre contas Nexo</small></a>
+          <a class="operation-button" href="statement.html"><span class="material-symbols-outlined">receipt_long</span><strong>Extrato</strong><small>Histórico completo</small></a>
+          <a class="operation-button" href="locator.html"><span class="material-symbols-outlined">map</span><strong>Agências</strong><small>Busca por CEP</small></a>
+        </nav>
+      </div>
+    </main>
+    <div data-component="footer"></div>
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+      <div class="toast align-items-center text-bg-primary border-0" id="appToast" role="status" aria-live="polite" aria-atomic="true">
+        <div class="d-flex"><div class="toast-body" id="toastMessage">Mensagem</div><button class="btn-close btn-close-white me-2 m-auto" type="button" data-bs-dismiss="toast" aria-label="Fechar"></button></div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../node_modules/jquery/tmp/jquery.js"><\/script>');</script>
+    <script src="../node_modules/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/components.js"></script>
+    <script src="../assets/js/app.js"></script>
+  </body>
+</html>
