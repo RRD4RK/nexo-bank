@@ -1,14 +1,21 @@
 <!doctype html>
 <html lang="pt-BR">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>NexoBank | Extrato</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@300;400;500;600&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@300;400;500;600&family=Public+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/scss-demo.css" />
   </head>
   <body data-page="statement" data-base="../">
     <div data-component="navbar"></div>
@@ -27,13 +34,26 @@
                 <option value="Saque">Saques</option>
                 <option value="Transferência">Transferências</option>
               </select>
-              <button class="btn btn-light btn-icon" type="button" data-action="print" aria-label="Imprimir"><span class="material-symbols-outlined">print</span></button>
+              <button
+                class="btn btn-light btn-icon"
+                type="button"
+                data-action="print"
+                aria-label="Imprimir"
+              >
+                <span class="material-symbols-outlined">print</span>
+              </button>
               <a class="btn btn-outline-primary" href="dashboard.html">Menu</a>
             </div>
           </div>
           <div class="table-responsive">
             <table class="table align-middle">
-              <thead><tr><th>Data</th><th>Operação</th><th class="text-end">Valor</th></tr></thead>
+              <thead>
+                <tr>
+                  <th>Data</th>
+                  <th>Operação</th>
+                  <th class="text-end">Valor</th>
+                </tr>
+              </thead>
               <tbody id="statementRows"></tbody>
             </table>
           </div>
@@ -42,9 +62,12 @@
     </main>
     <div data-component="footer"></div>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script>window.jQuery || document.write('<script src="../node_modules/jquery/tmp/jquery.js"><\/script>');</script>
+    <script>
+      window.jQuery ||
+        document.write('<script src="../node_modules/jquery/tmp/jquery.js"><\/script>');
+    </script>
     <script src="../node_modules/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
-    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/components.js"></script>
     <script src="../assets/js/app.js"></script>
   </body>

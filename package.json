@@ -11,8 +11,8 @@
     "type": "git",
     "url": "git+https://github.com/RRD4RK/nexo-bank.git"
   },
-  "license": "ISC",
-  "author": "Seu Nome",
+  "license": "MIT",
+  "author": "Raphael Ramos",
   "type": "commonjs",
   "main": "index.html",
   "scripts": {

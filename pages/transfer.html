@@ -1,37 +1,97 @@
 <!doctype html>
 <html lang="pt-BR">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>NexoBank | Transferência</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@300;400;500;600&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@300;400;500;600&family=Public+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/scss-demo.css" />
   </head>
   <body data-page="transfer" data-base="../">
     <div data-component="navbar"></div>
     <main class="page-shell">
       <form class="card form-card" id="transferForm">
         <div class="card-body">
-          <a class="btn btn-light btn-icon mb-3" href="dashboard.html" aria-label="Voltar"><span class="material-symbols-outlined">arrow_back</span></a>
+          <a class="btn btn-light btn-icon mb-3" href="dashboard.html" aria-label="Voltar"
+            ><span class="material-symbols-outlined">arrow_back</span></a
+          >
           <p class="kicker">Transferência</p>
           <h1 class="h2">Enviar para outra conta</h1>
-          <div class="form-floating mb-3"><input class="form-control" id="transferTarget" type="text" placeholder="CPF ou conta" required><label for="transferTarget">CPF ou conta destino</label></div>
-          <div class="form-floating mb-3"><input class="form-control money-mask" id="transferValue" type="text" placeholder="Valor" required><label for="transferValue">Valor</label></div>
-          <div class="form-floating mb-3"><input class="form-control" id="transferPassword" type="password" placeholder="Senha" required><label for="transferPassword">Senha</label></div>
+          <div class="form-floating mb-3">
+            <input
+              class="form-control"
+              id="transferTarget"
+              type="text"
+              placeholder="CPF ou conta"
+              required
+            /><label for="transferTarget">CPF ou conta destino</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input
+              class="form-control money-mask"
+              id="transferValue"
+              type="text"
+              placeholder="Valor"
+              required
+            /><label for="transferValue">Valor</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input
+              class="form-control"
+              id="transferPassword"
+              type="password"
+              placeholder="Senha"
+              required
+            /><label for="transferPassword">Senha</label>
+          </div>
           <div class="alert alert-danger d-none" id="transferFeedback" role="alert"></div>
-          <button class="btn btn-primary btn-lg w-100" type="submit">Confirmar transferência</button>
+          <button class="btn btn-primary btn-lg w-100" type="submit">
+            Confirmar transferência
+          </button>
         </div>
       </form>
     </main>
     <div data-component="footer"></div>
-    <div class="modal fade" id="confirmModal" tabindex="-1" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h2 class="modal-title fs-5">Confirmar operação</h2><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Fechar"></button></div><div class="modal-body" id="confirmModalBody"></div><div class="modal-footer"><button class="btn btn-outline-secondary" type="button" data-bs-dismiss="modal">Cancelar</button><button class="btn btn-primary" type="button" id="confirmModalButton">Confirmar</button></div></div></div></div>
+    <div class="modal fade" id="confirmModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title fs-5">Confirmar operação</h2>
+            <button
+              class="btn-close"
+              type="button"
+              data-bs-dismiss="modal"
+              aria-label="Fechar"
+            ></button>
+          </div>
+          <div class="modal-body" id="confirmModalBody"></div>
+          <div class="modal-footer">
+            <button class="btn btn-outline-secondary" type="button" data-bs-dismiss="modal">
+              Cancelar</button
+            ><button class="btn btn-primary" type="button" id="confirmModalButton">
+              Confirmar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script>window.jQuery || document.write('<script src="../node_modules/jquery/tmp/jquery.js"><\/script>');</script>
+    <script>
+      window.jQuery ||
+        document.write('<script src="../node_modules/jquery/tmp/jquery.js"><\/script>');
+    </script>
     <script src="../node_modules/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
-    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/components.js"></script>
     <script src="../assets/js/app.js"></script>
   </body>

@@ -3,9 +3,10 @@
 
 /*
   Arquivo-fonte Sass do NexoBank.
-  A folha publicada em ../css/style.css mantém o CSS compilado usado pelo GitHub Pages.
-  Este SCSS documenta a modularização exigida na avaliação: variáveis no partial
-  _variable.scss, mixins reutilizáveis no partial _mixins.scss e regras responsivas aqui.
+  O build gera ../css/scss-demo.css, carregado depois do CSS principal nas páginas.
+  Este arquivo demonstra a modularização exigida na avaliação: variáveis no partial
+  _variable.scss, mixins reutilizáveis no partial _mixins.scss e regras responsivas
+  aplicadas sobre componentes reais da interface.
 */
 
 .card,
